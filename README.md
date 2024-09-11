@@ -11,7 +11,7 @@ This project generates a particle system using HTML5 canvas. The system can be i
 * Different effects can be triggered using buttons
 
 ## Usage
-* Open the `index.html` file in a web browser / [acces github pages to view] (https://maguscat.github.io/Particles/) the particle system
+* Open the `index.html` file in a web browser / [acces github pages to view](https://maguscat.github.io/Particles/) the particle system
 * Click on the buttons to trigger different effects
 
 ## Code Structure
