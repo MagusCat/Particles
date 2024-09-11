@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particles</title>
+
+    <script src="https://kit.fontawesome.com/961cf675c1.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .container {
+            display: relative;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            padding: 0rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: transparent;
+        }                   
+
+        .container div {
+            display: inline-flex;
+            padding: 0.5rem;
+            outline: whitesmoke 2px solid;
+            border-radius: 20px;
+            margin: 2rem;
+        }
+
+        .container div:hover button {
+            visibility: visible;
+            width: 20px;
+            height: 20px;
+            transition: 1s;
+        }
+
+        .container div:hover i {
+            font-size: 1.5rem;
+            opacity: 1;
+            transition: ease-in 0.5s;
+        }
+
+        .container div button {
+            visibility: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            width: 0px;
+            height: 0px;
+            aspect-ratio: 1 / 1;
+            border-radius: 15px;
+            transition: 0.2s;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container div button i {
+            color: whitesmoke;
+            font-size: 0px;
+            transition: ease-in 0.1s;
+            opacity: 0;
+        }
+
+        .container div button i:hover {
+            transform: translateY(15%) scale(1.02);
+            transition: ease-in-out 0.2s;
+            padding: 3px;
+        }
+
+        canvas {
+            background: #0b0b0c;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="scene"></canvas>
+
+    <div class="container">
+        <div>
+            <button id="wheel">
+                <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button id="bounce">
+                <i class="fa-solid fa-cube"></i>
+            </button>
+
+            <button id="gravity">
+                <i class="fa-solid fa-earth"></i>
+            </button>
+
+            <button id="magic">
+                <i class="fa-solid fa-magic"></i>
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
