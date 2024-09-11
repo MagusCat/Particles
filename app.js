@@ -8,10 +8,11 @@ function App() {
     window.onresize = () => SceneCurrrent.resize();
     window.onmousemove = e => SceneCurrrent.mouse_move(e.clientX, e.clientY);
     window.onclick = e => SceneCurrrent.mouse_click(e.clientX, e.clientY);
+    window.ontouchmove = e => SceneCurrrent.mouse_move(e.touches[0].clientX, e.touches[0].clientY);
 
     document.getElementById("wheel").addEventListener("click", () => {
         const alpha = (2 * Math.PI) / 10;
-        const radius = innerWidth * 0.1;
+        const radius = innerWidth * 0.15;
 
         //https://stackoverflow.com/questions/14580033/algorithm-for-drawing-a-5-point-star
         for (let i = 0; i < 10; i++) {
@@ -88,6 +89,8 @@ function App() {
     window.particles = SceneCurrrent;
 
     SceneCurrrent.init();
+
+    document.getElementsByClassName("container")[0].style.opacity = 1;
 }
 
 

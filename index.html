@@ -25,6 +25,7 @@
             align-items: center;
             text-align: center;
             background: transparent;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
         }                   
 
         .container div {
@@ -88,7 +89,7 @@
 <body>
     <canvas id="scene"></canvas>
 
-    <div class="container">
+    <div class="container" style="opacity: 0;">
         <div>
             <button id="wheel">
                 <i class="fa-solid fa-star"></i>
